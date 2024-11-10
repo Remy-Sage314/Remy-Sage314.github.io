@@ -1,0 +1,41 @@
+baseURL = "https://moyingji.github.io/"
+languageCode = "zh-cn"
+title = "MoYingJi"
+theme = "PaperMod"
+
+defaultContentLanguage = "zh"
+outputs.home = [ "HTML", "RSS", "JSON" ]
+minify.minifyOutput = false
+
+menu.main = [
+    { name = "Archive", url = "archives", weight = 1 },
+    { name = "Tags", url = "tags", weight = 1 },
+    { name = "Search", url = "search", weight = 0 }
+]
+
+[params.profileMode]
+enabled = true
+title = "MoYingJi QwQ"
+subtitle = "一个平平无奇的 Subtitle"
+buttons = [
+    { name = "About", url = "about" }
+]
+
+[params]
+#ShowAllPagesInArchive = true
+ShowReadingTime = true
+ShowWordCount = true
+#hideFooter = true
+socialIcons = [
+    { name = "Github", url = "https://github.com/MoYingJi" },
+    { name = "Bilibili", url = "https://space.bilibili.com/591913409" }
+]
+
+[params.fuseOpts] # 搜素选项
+keys = ["title", "summary", "tags", "categories", "content"]
+
+[languages.zh]
+languageName = "简体中文"
+
+[markup.goldmark]
+renderer.unsafe = true
