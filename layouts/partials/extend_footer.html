@@ -1,0 +1,19 @@
+<!-- Extend Footer -->
+
+
+<!-- Live2D -->
+<!-- https://discourse.gohugo.io/t/hugo/48073 -->
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/waifu.css">
+<script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/live2d.min.js"></script>
+<script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/waifu-tips.js"></script>
+<script>
+    window.addEventListener('load', () => {
+        // https://fastly.jsdelivr.net/gh/fghrsh/live2d_api/model_list.json
+        localStorage.setItem("modelId", 2);  // 2 -> "bilibili-live/22"
+        initWidget({
+            waifuPath: "https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/waifu-tips.json",
+            cdnPath: "https://fastly.jsdelivr.net/gh/fghrsh/live2d_api/",
+            tools: ["hitokoto", "asteroids", "switch-model", "switch-texture", "photo", "info", "quit"]
+        });
+    })
+</script>
