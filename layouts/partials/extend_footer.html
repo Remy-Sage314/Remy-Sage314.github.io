@@ -3,6 +3,7 @@
 
 <!-- Live2D -->
 <!-- https://discourse.gohugo.io/t/hugo/48073 -->
+{{- if (site.Params.live2d) }}
 <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/waifu.css">
 <script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/live2d.min.js"></script>
 <script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/waifu-tips.js"></script>
@@ -17,3 +18,4 @@
         });
     })
 </script>
+{{- end }}

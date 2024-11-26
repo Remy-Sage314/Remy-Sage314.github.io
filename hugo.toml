@@ -26,6 +26,7 @@ buttons = [
 ShowReadingTime = true
 ShowWordCount = true
 #hideFooter = true
+live2d = true
 socialIcons = [
     { name = "Github", url = "https://github.com/MoYingJi" },
     { name = "Bilibili", url = "https://space.bilibili.com/591913409" }
