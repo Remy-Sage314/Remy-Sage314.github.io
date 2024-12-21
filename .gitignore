@@ -1,4 +1,11 @@
-.idea
+# Node
+node_modules/
+
+# Vite Press
+cache/
+
+# IDE
+.idea/
+
+# Files
 .directory
-.hugo_build.lock
-/public
