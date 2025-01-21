@@ -8,6 +8,8 @@ hero:
     tagline: "TODO-ODOT OvO"
 ---
 
-<script lang="ts">
-    console.log("神秘小网站 (bushi")
-</script>
+<ClientOnly>
+    <script lang="ts">
+        console.log("神秘小网站 (bushi")
+    </script>
+</ClientOnly>

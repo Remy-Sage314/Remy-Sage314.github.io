@@ -34,9 +34,8 @@ export default defineConfig({
         // https://cn.vitejs.dev/config
         css: {
             preprocessorOptions: {
-                scss: {
-                    api: 'modern-compiler',
-                }
+                sass: { api: 'modern' },
+                scss: { api: 'modern' },
             }
         },
     },
