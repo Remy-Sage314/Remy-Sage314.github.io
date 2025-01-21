@@ -1,10 +1,9 @@
 {
     "compilerOptions": {
-        "type": "module",
-        "target": "esnext",
-        "module": "esnext",
+        "target": "ESNext",
+        "module": "NodeNext",
         "types": ["vitepress/client"],
         "isolatedModules": true,
-        "moduleResolution": "nodeNext"
+        "moduleResolution": "NodeNext"
     }
 }
