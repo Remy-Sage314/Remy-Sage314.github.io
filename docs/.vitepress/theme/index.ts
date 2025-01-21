@@ -5,11 +5,13 @@ import './main.sass'
 
 const parent: Theme = DefaultTheme
 
+// noinspection JSUnusedGlobalSymbols
 export default {
     extends: parent,
 
-    async enhanceApp(ctx) {
+    async enhanceApp(ctx: any) {
         parent?.enhanceApp?.(ctx)
+
         if (!import.meta.env.SSR) {
             // await live2d() // 效果不好 鸽了
         }

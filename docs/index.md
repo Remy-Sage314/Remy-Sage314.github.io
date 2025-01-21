@@ -8,8 +8,8 @@ hero:
     tagline: "TODO-ODOT OvO"
 ---
 
-<ClientOnly>
-    <script lang="ts">
+<script setup lang="ts">
+    if (!import.meta.env.SSR) {
         console.log("神秘小网站 (bushi")
-    </script>
-</ClientOnly>
+    }
+</script>

@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/zh/reference/site-config
+// noinspection JSUnusedGlobalSymbols
 export default defineConfig({
     title: "MoYingJi QwQ",
     description: "一个不知道是什么的网站",
