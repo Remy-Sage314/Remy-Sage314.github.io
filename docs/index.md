@@ -3,8 +3,11 @@
 layout: home
 
 hero:
-  name: "MoYingJi QwQ"
-  text: "不知道是什么的网站"
-  tagline: "希望里面的东西对任何人有用"
+    name: "MoYingJi QwQ"
+    text: "某神秘小网站罢了"
+    tagline: "TODO-ODOT OvO"
 ---
 
+<script lang="ts">
+    console.log("神秘小网站 (bushi")
+</script>

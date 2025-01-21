@@ -1,11 +1,12 @@
 # Node
-node_modules/
+/node_modules/
 
 # Vite Press
-cache/
+/docs/.vitepress/cache/
+/docs/.vitepress/dist/
 
 # IDE
-.idea/
+/.idea/
 
 # Files
 .directory

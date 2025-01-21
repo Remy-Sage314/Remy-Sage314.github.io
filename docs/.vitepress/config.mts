@@ -1,5 +1,3 @@
-// noinspection JSUnusedGlobalSymbols
-
 import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/zh/reference/site-config
@@ -9,14 +7,18 @@ export default defineConfig({
     themeConfig: {
         // https://vitepress.dev/zh/reference/default-theme-config
         nav: [
+            { text: '关于', link: '/about' },
         ],
-
-        sidebar: [
-        ],
-
         socialLinks: [
             { icon: 'github', link: 'https://github.com/MoYingJi/moyingji.github.io' }
         ],
+        sidebar: [
+        ],
+
+        search: {
+            provider: 'local',
+            options: {}
+        },
     },
 
     lang: 'zh-CN',
@@ -27,5 +29,15 @@ export default defineConfig({
         },
     },
 
-    outDir: '../public',
+    vite: {
+        // Vite 配置选项
+        // https://cn.vitejs.dev/config
+        css: {
+            preprocessorOptions: {
+                scss: {
+                    api: 'modern-compiler',
+                }
+            }
+        },
+    },
 })
