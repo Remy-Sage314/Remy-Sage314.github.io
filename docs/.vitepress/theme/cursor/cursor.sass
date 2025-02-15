@@ -1,8 +1,20 @@
 // 光标样式自定义
 
+html.dark
+    *
+        cursor: url(cursor-white.png) 3 3, auto !important
+    .cursor-ring
+        border: 2px solid rgba(255, 255, 255, 0.5)
+    .cursor-ring.active
+        background-color: rgba(255, 255, 255, 0.7)
+html
+    *
+        cursor: url(cursor-black.png) 3 3, auto !important
+    .cursor-ring
+        border: 2px solid rgba(0, 0, 0, 0.5)
+    .cursor-ring.active
+        background-color: rgba(0, 0, 0, 0.7)
 
-*
-    cursor: url(cursor.png) 3 3, auto !important
 
 :any-link
     --custom-cursor-ring: active
@@ -20,12 +32,8 @@ button
     pointer-events: none
     transform: translate(-50%, -50%)
 
-    border: 2px solid rgba(255, 255, 255, 0.5)
-
     transition: background-color 0.5s, width 0.3s, height 0.3s
 
     &.active
         width: 24px
         height: 24px
-
-        background-color: rgba(255, 255, 255, 0.7)
