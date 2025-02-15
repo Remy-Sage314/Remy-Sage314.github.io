@@ -1,0 +1,31 @@
+// 光标样式自定义
+
+
+*
+    cursor: url(cursor.png) 3 3, auto !important
+
+:any-link
+    --custom-cursor-ring: active
+button
+    --custom-cursor-ring: active
+
+
+.cursor-ring
+    z-index: 999
+    position: absolute
+    width: 37px
+    height: 37px
+    background-color: transparent
+    border-radius: 50%
+    pointer-events: none
+    transform: translate(-50%, -50%)
+
+    border: 2px solid rgba(255, 255, 255, 0.5)
+
+    transition: background-color 0.5s, width 0.3s, height 0.3s
+
+    &.active
+        width: 24px
+        height: 24px
+
+        background-color: rgba(255, 255, 255, 0.7)
