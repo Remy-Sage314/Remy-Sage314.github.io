@@ -1,8 +1,6 @@
 import './cursor.sass'
 
 if (!import.meta.env.SSR) {
-    console.log("Custom Cursor Loading!")
-
     const cr = document.createElement('div')
     cr.classList.add('cursor-ring') // 添加类名以便应用样式
     document.body.appendChild(cr)
@@ -20,6 +18,7 @@ if (!import.meta.env.SSR) {
     document.addEventListener('mouseout',  mouseStyleChange)
 
     function mouseStyleChange(e: MouseEvent) {
+        // ↑ 鼠标移入/移出元素时 修改样式 判断是否切换为 active
         if (e.target instanceof HTMLElement) {
             const t = e.target
             const s = window.getComputedStyle(t)
@@ -30,8 +29,9 @@ if (!import.meta.env.SSR) {
     }
 
     function animate() {
-        cx += (tx - cx) * 0.35
-        cy += (ty - cy) * 0.35
+        const k = 0.35
+        cx += (tx - cx) * k
+        cy += (ty - cy) * k
         cr.style.left = `${cx}px`
         cr.style.top  = `${cy}px`
 

@@ -1,39 +1,51 @@
 // 光标样式自定义
 
+$border-width: 2px
+$border-alpha: 0.5
+$active-background-alpha: 0.4
+
+$ring-size: 37px
+$ring-size-active: 24px
+
+$transition-time: 0.3s
+
+// Hover 时的 Active 样式
+
+:any-link, button
+    --custom-cursor-ring: active
+
+// 深色 / 浅色 主题
+
 html.dark
     *
         cursor: url(cursor-white.png) 3 3, auto !important
     .cursor-ring
-        border: 2px solid rgba(255, 255, 255, 0.5)
+        border-color: rgba(255, 255, 255, $border-alpha)
     .cursor-ring.active
-        background-color: rgba(255, 255, 255, 0.7)
+        background-color: rgba(255, 255, 255, $active-background-alpha)
 html
     *
         cursor: url(cursor-black.png) 3 3, auto !important
     .cursor-ring
-        border: 2px solid rgba(0, 0, 0, 0.5)
+        border-color: rgba(0, 0, 0, $border-alpha)
     .cursor-ring.active
-        background-color: rgba(0, 0, 0, 0.7)
+        background-color: rgba(0, 0, 0, $active-background-alpha)
 
-
-:any-link
-    --custom-cursor-ring: active
-button
-    --custom-cursor-ring: active
-
+// Cursor Ring 样式
 
 .cursor-ring
     z-index: 999
     position: absolute
-    width: 37px
-    height: 37px
+    width: $ring-size
+    height: $ring-size
     background-color: transparent
+    border: $border-width solid
     border-radius: 50%
     pointer-events: none
     transform: translate(-50%, -50%)
 
-    transition: background-color 0.5s, width 0.3s, height 0.3s
+    transition: background-color $transition-time, width $transition-time, height $transition-time
 
     &.active
-        width: 24px
-        height: 24px
+        width: $ring-size-active
+        height: $ring-size-active
