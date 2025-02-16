@@ -38,4 +38,12 @@ if (!import.meta.env.SSR) {
         requestAnimationFrame(animate)
     }
     animate()
+
+
+    document.addEventListener('mousedown', () => {
+        cr.classList.add('down')
+    })
+    document.addEventListener('mouseup', () => {
+        cr.classList.remove('down')
+    })
 }
