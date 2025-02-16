@@ -1,3 +1,5 @@
+@use "sass:string"
+
 // 光标样式自定义
 
 $border-width: 2px
@@ -16,7 +18,7 @@ $transition-down-time: 0.1s
     $s: ''
     @each $p in $transition-props
         $s: #{ $s + #{$p} $t + "," }
-    $s: str-slice($s, 1, -2)
+    $s: string.slice($s, 1, -2)
     transition: #{$s}
 
 
