@@ -33,11 +33,5 @@ export default defineConfig({
     vite: {
         // Vite 配置选项
         // https://cn.vitejs.dev/config
-        css: {
-            preprocessorOptions: {
-                sass: { api: 'modern' },
-                scss: { api: 'modern' },
-            }
-        },
     },
 })

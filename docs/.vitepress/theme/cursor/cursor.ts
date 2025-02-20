@@ -30,8 +30,19 @@ if (!import.meta.env.SSR) {
 
     function animate() {
         const k = 0.35
-        cx += (tx - cx) * k
-        cy += (ty - cy) * k
+        cx += (tx + window.scrollX - cx) * k
+        cy += (ty + window.scrollY - cy) * k
+
+        const cs = window.getComputedStyle(cr)
+        const sx = parseInt(cs.width.slice(0, -2)) / 2
+        const sy = parseInt(cs.height.slice(0, -2)) / 2
+        if (!isNaN(sx) && !isNaN(sy)) {
+            cx = Math.max(cx-sx, 0) + sx
+            cy = Math.max(cy-sy, 0) + sy
+            cx = Math.min(cx+sx, window.innerWidth + window.scrollX) - sx
+            cy = Math.min(cy+sy, window.innerHeight + window.scrollY) - sy
+        }
+
         cr.style.left = `${cx}px`
         cr.style.top  = `${cy}px`
 
