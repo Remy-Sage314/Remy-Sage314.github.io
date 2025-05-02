@@ -3,6 +3,8 @@ import DefaultTheme from 'vitepress/theme-without-fonts'
 
 import './main.sass'
 
+import './css/css.ts'
+
 import './cursor/cursor.ts'
 
 const parent: Theme = DefaultTheme

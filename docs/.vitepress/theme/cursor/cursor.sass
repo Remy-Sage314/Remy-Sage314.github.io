@@ -42,11 +42,21 @@ html
         border-color: rgba(0, 0, 0, $border-alpha)
         --active-background-color: rgba(0, 0, 0, #{$active-background-alpha})
 
+// Box 样式
+
+.cursor-ring-box
+    position: absolute
+    top: 0
+    width: 100%
+    height: 100%
+    overflow: hidden
+
 // Cursor Ring 样式
 
 .cursor-ring
     z-index: 999
     position: absolute
+    clip-path: inset(0 0 0 0)
     width: $ring-size
     height: $ring-size
     background-color: transparent
