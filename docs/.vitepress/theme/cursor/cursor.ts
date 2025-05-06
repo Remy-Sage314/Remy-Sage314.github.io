@@ -65,7 +65,7 @@ if (!import.meta.env.SSR) {
         }
     })
 
-    document.addEventListener('pointerdown', (e) => {
+    document.addEventListener('pointerup', (e) => {
         switch (e.pointerType) {
             case 'mouse':
                 cr.classList.remove('down')
