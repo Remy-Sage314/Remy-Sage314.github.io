@@ -68,7 +68,7 @@ if (!import.meta.env.SSR) {
     document.addEventListener('pointerdown', (e) => {
         switch (e.pointerType) {
             case 'mouse':
-                cr.classList.add('down')
+                cr.classList.remove('down')
                 ringAppear()
                 break
 
