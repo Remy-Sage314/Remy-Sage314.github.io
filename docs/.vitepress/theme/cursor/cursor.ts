@@ -31,15 +31,6 @@ if (!import.meta.env.SSR) {
         }
     }
 
-    document.addEventListener('mousemove', ringAppear)
-    document.addEventListener('mouseup', ringAppear)
-    document.addEventListener('mousedown', ringAppear)
-    document.addEventListener('mouseout', (e) => {
-        if (e.relatedTarget === null) ringHide()
-    })
-    function ringAppear() { cr.classList.remove('visually-hidden') }
-    function ringHide() { cr.classList.add('visually-hidden') }
-
     function animate() {
         const k = 0.35
         cx += (tx - cx) * k
@@ -52,11 +43,52 @@ if (!import.meta.env.SSR) {
     }
     animate()
 
-
-    document.addEventListener('mousedown', () => {
-        cr.classList.add('down')
+    // 当鼠标移出页面时 隐藏 ring
+    document.addEventListener('mouseout', (e) => {
+        if (e.relatedTarget === null) ringHide()
     })
-    document.addEventListener('mouseup', () => {
-        cr.classList.remove('down')
+
+    function ringAppear() { cr.classList.remove('visually-hidden'); console.log("appear") }
+    function ringHide() { cr.classList.add('visually-hidden'); console.log("hide") }
+
+    document.addEventListener('pointerdown', (e) => {
+        switch (e.pointerType) {
+            case 'mouse':
+                cr.classList.add('down')
+                ringAppear()
+                break
+
+            case 'pen':
+            case 'touch':
+                ringHide()
+                break
+        }
+    })
+
+    document.addEventListener('pointerdown', (e) => {
+        switch (e.pointerType) {
+            case 'mouse':
+                cr.classList.add('down')
+                ringAppear()
+                break
+
+            case 'pen':
+            case 'touch':
+                ringHide()
+                break
+        }
+    })
+
+    document.addEventListener('pointermove', (e) => {
+        switch (e.pointerType) {
+            case 'mouse':
+                ringAppear()
+                break
+
+            case 'pen':
+            case 'touch':
+                ringHide()
+                break
+        }
     })
 }
