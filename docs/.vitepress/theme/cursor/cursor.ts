@@ -48,8 +48,8 @@ if (!import.meta.env.SSR) {
         if (e.relatedTarget === null) ringHide()
     })
 
-    function ringAppear() { cr.classList.remove('visually-hidden'); console.log("appear") }
-    function ringHide() { cr.classList.add('visually-hidden'); console.log("hide") }
+    function ringAppear() { cr.classList.remove('visually-hidden') }
+    function ringHide() { cr.classList.add('visually-hidden') }
 
     document.addEventListener('pointerdown', (e) => {
         switch (e.pointerType) {
