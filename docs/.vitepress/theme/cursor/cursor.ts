@@ -34,14 +34,16 @@ if (!import.meta.env.SSR) {
     document.addEventListener('mousemove', ringAppear)
     document.addEventListener('mouseup', ringAppear)
     document.addEventListener('mousedown', ringAppear)
-    document.addEventListener('mouseout', ringHide)
+    document.addEventListener('mouseout', (e) => {
+        if (e.relatedTarget === null) ringHide()
+    })
     function ringAppear() { cr.classList.remove('visually-hidden') }
     function ringHide() { cr.classList.add('visually-hidden') }
 
     function animate() {
         const k = 0.35
-        cx += (tx + window.scrollX - cx) * k
-        cy += (ty + window.scrollY - cy) * k
+        cx += (tx - cx) * k
+        cy += (ty - cy) * k
 
         cr.style.left = `${cx}px`
         cr.style.top  = `${cy}px`

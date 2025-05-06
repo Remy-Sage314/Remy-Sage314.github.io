@@ -30,8 +30,22 @@ export default defineConfig({
         },
     },
 
+    markdown: {
+        // Markdown 配置选项
+        // https://vitepress.dev/guide/markdown
+        // https://vitepress.dev/zh/reference/site-config#markdown
+
+        image: {
+            lazyLoading: true
+        },
+        math: true,
+    },
+
     vite: {
         // Vite 配置选项
         // https://cn.vitejs.dev/config
+
+        plugins: [
+        ]
     },
 })

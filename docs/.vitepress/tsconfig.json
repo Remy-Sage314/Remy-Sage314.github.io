@@ -4,6 +4,8 @@
         "module": "NodeNext",
         "types": ["vitepress/client"],
         "isolatedModules": true,
-        "moduleResolution": "NodeNext"
+        "moduleResolution": "nodenext",
+        "allowImportingTsExtensions": true,
+        "jsx": "preserve"
     }
 }

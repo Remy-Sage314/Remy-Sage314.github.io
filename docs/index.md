@@ -5,11 +5,6 @@ layout: home
 hero:
     name: "MoYingJi QwQ"
     text: "某神秘小网站罢了"
-    tagline: "TODO-ODOT OvO"
+    tagline: "这里什么都没有 真的 已经荒废多年了 OvO"
 ---
 
-<script setup lang="ts">
-    if (!import.meta.env.SSR) {
-        console.log("神秘小网站 (bushi")
-    }
-</script>
