@@ -38,7 +38,7 @@
 
 :::
 
-<div style="display: flex">
+<FlexDiv>
 
 <div>
 
@@ -62,4 +62,4 @@
 
 <ArkMedia unselectable src="./awa.png" />
 
-</div>
+</FlexDiv>
