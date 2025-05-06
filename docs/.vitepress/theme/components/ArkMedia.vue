@@ -23,7 +23,7 @@
 </template>
 
 <!-- https://github.com/YunYouJun/ak-ui/blob/master/src/scss/_ak-media.scss -->
-<style lang="sass">
+<style scoped lang="sass">
     .ak-media-album
         position: relative
         display: inline-block
