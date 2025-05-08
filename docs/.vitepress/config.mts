@@ -48,6 +48,8 @@ export default defineConfig({
         // Vite 配置选项
         // https://cn.vitejs.dev/config
 
+        publicDir: '../public',
+
         plugins: [
         ]
     },
