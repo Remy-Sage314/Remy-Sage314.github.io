@@ -5,6 +5,9 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
     title: "MoYingJi QwQ",
     description: "一个不知道是什么的网站",
+
+    srcDir: './src',
+
     themeConfig: {
         // https://vitepress.dev/zh/reference/default-theme-config
         nav: [
