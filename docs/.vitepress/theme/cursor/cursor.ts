@@ -8,6 +8,8 @@ if (!import.meta.env.SSR) {
     box.appendChild(cr)
     document.body.appendChild(box)
 
+    document.body.classList.add('enable-cursor')
+
     let tx = 0
     let ty = 0
     let cx = 0
@@ -48,6 +50,7 @@ if (!import.meta.env.SSR) {
         if (e.relatedTarget === null) ringHide()
     })
 
+    // 控制 ring 是否显示
     function ringAppear() { cr.classList.remove('visually-hidden') }
     function ringHide() { cr.classList.add('visually-hidden') }
 
@@ -64,7 +67,6 @@ if (!import.meta.env.SSR) {
                 break
         }
     })
-
     document.addEventListener('pointerup', (e) => {
         switch (e.pointerType) {
             case 'mouse':
@@ -78,7 +80,6 @@ if (!import.meta.env.SSR) {
                 break
         }
     })
-
     document.addEventListener('pointermove', (e) => {
         switch (e.pointerType) {
             case 'mouse':
@@ -90,5 +91,12 @@ if (!import.meta.env.SSR) {
                 ringHide()
                 break
         }
+    })
+
+    // 全屏修复
+    document.addEventListener('fullscreenchange', () => {
+        if (document.fullscreenElement)
+             document.body.classList.remove('enable-cursor')
+        else document.body.classList.add('enable-cursor')
     })
 }

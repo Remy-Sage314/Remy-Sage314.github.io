@@ -1,5 +1,8 @@
 import { defineConfig } from 'vitepress'
 
+import { vitepressDemoPlugin } from 'vitepress-demo-plugin'
+import { LocalSearchTranslations } from "vitepress/types/local-search.js";
+
 // https://vitepress.dev/zh/reference/site-config
 // noinspection JSUnusedGlobalSymbols
 export default defineConfig({
@@ -21,7 +24,9 @@ export default defineConfig({
 
         search: {
             provider: 'local',
-            options: {}
+            options: {
+                translations: searchTranslation(),
+            }
         },
     },
 
@@ -42,6 +47,10 @@ export default defineConfig({
             lazyLoading: true
         },
         math: true,
+
+        config(md) {
+            md.use(vitepressDemoPlugin)
+        },
     },
 
     vite: {
@@ -53,4 +62,27 @@ export default defineConfig({
         plugins: [
         ]
     },
+
+    ssr: {
+        noExternal: [
+            "@nolebase/ui-asciinema",
+        ]
+    }
 })
+
+function searchTranslation(): LocalSearchTranslations { return {
+    button: {
+        buttonText: '搜索文档',
+    },
+    modal: {
+        displayDetails: '显示详细信息',
+        resetButtonTitle: '清除查询条件',
+        backButtonTitle: '返回',
+        noResultsText: '没有搜索结果',
+        footer: {
+            selectText: '选择',
+            navigateText: '切换',
+            closeText: '关闭',
+        },
+    }
+} }
