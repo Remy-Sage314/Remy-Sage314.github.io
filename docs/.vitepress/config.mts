@@ -60,14 +60,14 @@ export default defineConfig({
         publicDir: '../public',
 
         plugins: [
-        ]
-    },
+        ],
 
-    ssr: {
-        noExternal: [
-            "@nolebase/ui-asciinema",
-        ]
-    }
+        ssr: {
+            noExternal: [
+                "@nolebase/ui-asciinema",
+            ]
+        }
+    },
 })
 
 function searchTranslation(): LocalSearchTranslations { return {
