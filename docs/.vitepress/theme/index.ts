@@ -6,8 +6,6 @@ import './main.sass'
 import './styles/css.ts'
 import './cursor/cursor.ts'
 
-import './other/search-box-animation/script.ts'
-
 import * as ER from '@nolebase/vitepress-plugin-enhanced-readabilities/client'
 import '@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css'
 import '@nolebase/vitepress-plugin-enhanced-mark/client/style.css'
@@ -15,6 +13,10 @@ import '@nolebase/vitepress-plugin-enhanced-mark/client/style.css'
 import * as Comp from './components/_comps.ts'
 
 import * as Lumen from '@theojs/lumen'
+
+if (!import.meta.env.SSR) {
+    import('./other/search-box-animation/script.ts')
+}
 
 const parent: Theme = DefaultTheme
 
