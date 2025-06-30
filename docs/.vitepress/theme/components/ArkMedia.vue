@@ -23,7 +23,7 @@
 </template>
 
 <!-- https://github.com/YunYouJun/ak-ui/blob/master/src/scss/_ak-media.scss -->
-<style scoped lang="sass">
+<style lang="sass">
     .ak-media-album
         position: relative
         display: inline-block
@@ -36,7 +36,7 @@
         max-width: 100%
         max-height: 100%
 
-        img
+        & img
             vertical-align: bottom
 
         &::before

@@ -1,10 +1,10 @@
 {
     "compilerOptions": {
         "target": "ESNext",
-        "module": "NodeNext",
-        "types": ["vitepress/client"],
+        "module": "ESNext",
+        "moduleResolution": "bundler",
         "isolatedModules": true,
-        "moduleResolution": "nodenext",
+        "types": ["vitepress/client"],
         "allowImportingTsExtensions": true,
         "jsx": "preserve"
     }

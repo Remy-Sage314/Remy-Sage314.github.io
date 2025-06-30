@@ -1,7 +1,8 @@
 import { defineConfig } from 'vitepress'
 
-import { vitepressDemoPlugin } from 'vitepress-demo-plugin'
 import { LocalSearchTranslations } from "vitepress/types/local-search.js";
+
+import { vitepressDemoPlugin } from 'vitepress-demo-plugin'
 
 // https://vitepress.dev/zh/reference/site-config
 // noinspection JSUnusedGlobalSymbols
@@ -62,9 +63,18 @@ export default defineConfig({
         plugins: [
         ],
 
+        optimizeDeps: {
+            exclude: [
+                '@nolebase/vitepress-plugin-enhanced-readabilities/client',
+                'vitepress',
+                '@nolebase/ui',
+            ]
+        },
         ssr: {
             noExternal: [
                 "@nolebase/ui-asciinema",
+                '@nolebase/vitepress-plugin-enhanced-readabilities',
+                '@nolebase/ui',
             ]
         }
     },

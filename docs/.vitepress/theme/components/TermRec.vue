@@ -10,12 +10,12 @@
         autoplay = false,
         loop = false,
     } = defineProps<{
-        src: string,
-        cols: number,
-        rows: number,
-        fontsize: string,
-        autoplay: boolean,
-        loop: boolean,
+        src : string,
+        cols ?: number,
+        rows ?: number,
+        fontsize ?: string,
+        autoplay ?: boolean,
+        loop ?: boolean,
     }>()
 </script>
 
