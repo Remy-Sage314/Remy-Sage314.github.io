@@ -15,10 +15,12 @@ if (!import.meta.env.SSR) {
     let cx = 0
     let cy = 0
 
-    document.addEventListener('mousemove', (e) => {
+    function updatePos(e: MouseEvent) {
         tx = e.clientX
         ty = e.clientY
-    })
+    }
+
+    document.addEventListener('mousemove', updatePos)
     document.addEventListener('mouseover', mouseStyleChange)
     document.addEventListener('mouseout',  mouseStyleChange)
 
@@ -57,6 +59,7 @@ if (!import.meta.env.SSR) {
     document.addEventListener('pointerdown', (e) => {
         switch (e.pointerType) {
             case 'mouse':
+                updatePos(e)
                 cr.classList.add('down')
                 ringAppear()
                 break
@@ -70,6 +73,7 @@ if (!import.meta.env.SSR) {
     document.addEventListener('pointerup', (e) => {
         switch (e.pointerType) {
             case 'mouse':
+                updatePos(e)
                 cr.classList.remove('down')
                 ringAppear()
                 break

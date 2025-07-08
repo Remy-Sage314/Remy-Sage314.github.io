@@ -2,15 +2,19 @@
     import { DocPill } from '@theojs/lumen'
 
     const {
-        project
+        project,
+        suffix,
     } = defineProps<{
-        project : string
+        project : string,
+        suffix ?: string,
     }>()
+
+    const _s = suffix || project
 </script>
 
 <template>
     <DocPill
-        name="GitHub"
+        :name="'GitHub: ' + _s"
         :link="'https://github.com/' + project"
         :image="{
             light: 'https://i.theojs.cn/logo/github.svg',

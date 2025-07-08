@@ -7,6 +7,7 @@
 <style lang="sass">
     .project-container
         display: flex
+        white-space: nowrap
         flex-wrap: nowrap
         align-items: center
         gap: 4px

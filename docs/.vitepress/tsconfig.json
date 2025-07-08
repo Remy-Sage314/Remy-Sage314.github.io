@@ -6,6 +6,7 @@
         "isolatedModules": true,
         "types": ["vitepress/client"],
         "allowImportingTsExtensions": true,
+        "noEmit": true,
         "jsx": "preserve"
     }
 }

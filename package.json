@@ -4,6 +4,7 @@
     "@nolebase/vitepress-plugin-enhanced-mark": "^2.17.2",
     "@nolebase/vitepress-plugin-enhanced-readabilities": "^2.17.2",
     "@nolebase/vitepress-plugin-page-properties": "^2.17.2",
+    "markdown-it-ins": "^4.0.0",
     "markdown-it-mathjax3": "^4.3.2",
     "sass": "^1.87.0",
     "vite": "^6.3.5",
@@ -19,6 +20,8 @@
   "dependencies": {
     "@nolebase/ui-asciinema": "^2.17.2",
     "@theojs/lumen": "^5.8.1",
-    "asciinema-player": "^3.10.0"
+    "asciinema-player": "^3.10.0",
+    "plotly.js-dist-min": "^3.0.1",
+    "ts-regex-builder": "^1.8.2"
   }
 }

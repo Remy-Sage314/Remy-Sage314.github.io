@@ -10,8 +10,10 @@
 
 <template>
     <ProjectDownload>
-        <span><code>{{ name }}</code></span>
+        <span class="project-aur">aur</span>
+        <span>/</span>
+        <span class="project-package-name">{{ name }}</span>
         <span> </span>
-        <img :src="'https://img.shields.io/winget/v/' + name"/>
+        <img class="unselectable" draggable="false" :src="'https://img.shields.io/aur/version/' + name"/>
     </ProjectDownload>
 </template>

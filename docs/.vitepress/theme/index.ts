@@ -37,7 +37,9 @@ export default {
 
         const app = ctx.app
         Comp.component(app)
-        app.component("Pill", Lumen.DocPill)
+        app.component("DocPill", Lumen.DocPill)
+        app.component("DocLinks", Lumen.DocLinks)
+        app.component("DocBoxCube", Lumen.DocBoxCube)
 
         if (!import.meta.env.SSR) {
         }

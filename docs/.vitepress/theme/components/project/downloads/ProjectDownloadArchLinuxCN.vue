@@ -14,6 +14,6 @@
         <span>/</span>
         <span class="project-package-name">{{ name }}</span>
         <span> </span>
-        <img :src="'https://img.shields.io/badge/dynamic/json?label=archlinuxcn&query=%24.version&url=https%3A%2F%2Fbuild.archlinuxcn.org%2Fapi%2Fv2%2Fpackages%2F' + name"/>
+        <img class="unselectable" draggable="false" :src="'https://img.shields.io/badge/dynamic/json?label=archlinuxcn&query=%24.version&url=https%3A%2F%2Fbuild.archlinuxcn.org%2Fapi%2Fv2%2Fpackages%2F' + name"/>
     </ProjectDownload>
 </template>

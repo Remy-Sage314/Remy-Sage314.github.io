@@ -1,16 +1,16 @@
 # Obtainium
 从各来源更新你的 Android 应用
 
-| 名称         | Obtainium                                           |
-|------------|-----------------------------------------------------|
-| 平台         | <PlatformAndroid/>                                  |
-| 链接         | <ProjectSourceGithub project="ImranR98/Obtainium"/> |
-| 协议         | GPL-3.0-only                                        |
-| Android 包名 | `dev.imranr.obtainium`                               |
+<ProjectProperties name="Obtainium">
+    <template #platform> <PlatformAndroid/> </template>
+    <template #url> <LinkGithub project="ImranR98/Obtainium"/> </template>
+    <template #license> GPL-3.0-only </template>
+    <template #android> dev.imranr.obtainium </template>
+</ProjectProperties>
 
-| 食用方法              | 特殊值                                                 |
-|-------------------|-----------------------------------------------------|
-| Android Obtainium | <ProjectSourceGithub project="ImranR98/Obtainium"/> |
+<ProjectDownloads
+    obtainium_github="ImranR98/Obtainium"
+/>
 
 Obtainium 是一个开源的 Android 应用获取和更新工具
 

@@ -1,7 +1,7 @@
 import { App } from "vue";
 export { component }
 
-const glob = import.meta.glob(['./*.vue', './**/*.vue'], { eager: true })
+const glob = import.meta.glob('./**/*.vue', { eager: true })
 
 const modules = {}
 Object.keys(glob).forEach(key => {
