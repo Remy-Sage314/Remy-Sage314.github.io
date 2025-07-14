@@ -1,4 +1,1 @@
-import './_css.sass'
-
-import './home-rainbow.sass'
-import './marker.sass'
+const glob = import.meta.glob('./**/*.sass', { eager: true })
