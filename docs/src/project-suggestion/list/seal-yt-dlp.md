@@ -30,9 +30,9 @@
 />
 
 <div style="display: flex; flex-direction: row">
-<img src="/img/project-suggestion/seal/1.jpg" width="32%" style="margin: 5px; object-fit: contain"/>
-<img src="/img/project-suggestion/seal/2.jpg" width="32%" style="margin: 5px; object-fit: contain"/>
-<img src="/img/project-suggestion/seal/3.jpg" width="32%" style="margin: 5px; object-fit: contain"/>
+<img src="/project-suggestion/seal/1.jpg" width="32%" style="margin: 5px; object-fit: contain"/>
+<img src="/project-suggestion/seal/2.jpg" width="32%" style="margin: 5px; object-fit: contain"/>
+<img src="/project-suggestion/seal/3.jpg" width="32%" style="margin: 5px; object-fit: contain"/>
 </div>
 
 

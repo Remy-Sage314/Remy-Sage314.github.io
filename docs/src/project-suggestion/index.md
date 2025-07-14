@@ -7,7 +7,7 @@
         name: 'Obtainium',
         link: 'obtainium',
         image: {
-            src: 'https://raw.githubusercontent.com/ImranR98/Obtainium/refs/heads/main/assets/graphics/icon_small.png'
+            src: 'obtainium.png'
         },
         desc: '从各来源更新你的 Android 应用'
     }
@@ -18,7 +18,7 @@
         name: 'yt-dlp',
         link: 'seal-yt-dlp#yt-dlp',
         image: {
-            src: 'https://avatars.githubusercontent.com/u/79589310'
+            src: 'yt-dlp.png'
         },
         desc: '功能丰富的命令行音频频下载器'
     },
@@ -26,7 +26,7 @@
         name: 'Seal',
         link: 'seal-yt-dlp#seal',
         image: {
-            src: 'https://raw.githubusercontent.com/JunkFood02/Seal/refs/heads/main/fastlane/metadata/android/en-US/images/icon.png'
+            src: 'seal.png'
         },
         desc: 'Android 上基于 yt-dlp 的音视频下载器'
     }
@@ -37,7 +37,7 @@
         name: 'Moonlight',
         link: 'sunshine-moonlight#moonlight',
         image: {
-            src: 'https://avatars.githubusercontent.com/u/6118379'
+            src: 'moonlight.png'
         },
         desc: 'Sunshine 和 NVIDIA GameStream 的开源客户端'
     },
@@ -45,7 +45,7 @@
         name: 'Sunshine',
         link: 'sunshine-moonlight#sunshine',
         image: {
-            src: 'https://raw.githubusercontent.com/LizardByte/Sunshine/refs/heads/master/sunshine.svg'
+            src: 'sunshine.svg'
         },
         desc: 'Moonlight 的自托管游戏串流主机'
     }

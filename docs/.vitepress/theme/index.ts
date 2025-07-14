@@ -2,15 +2,14 @@ import { h } from "vue";
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme-without-fonts'
 
-import './main.sass'
-import './styles/css.ts'
-import './cursor/cursor.ts'
+import './style/_css.ts'
+import './other/cursor-and-ring/cursor.ts'
 
 import * as ER from '@nolebase/vitepress-plugin-enhanced-readabilities/client'
 import '@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css'
 import '@nolebase/vitepress-plugin-enhanced-mark/client/style.css'
 
-import * as Comp from './components/_comps.ts'
+import * as Comp from './component/_comps.ts'
 
 import * as Lumen from '@theojs/lumen'
 

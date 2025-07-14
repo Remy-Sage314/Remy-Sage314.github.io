@@ -14,7 +14,8 @@ const config: UserConfig<NoInfer<DefaultTheme.Config>> = {
     cleanUrls: true,
 
     rewrites: {
-        ":path/list/:name": ":path/:name"
+        // List
+        ":path/list/:name": ":path/:name",
     },
 
     themeConfig: {

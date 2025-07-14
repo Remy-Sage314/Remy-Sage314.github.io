@@ -60,7 +60,7 @@
 
 </div>
 
-<ArkMedia unselectable src="./img/awa.png" />
+<ArkMedia unselectable src="./test/awa.png" />
 
 </FlexDiv>
 
@@ -68,4 +68,4 @@
 使用 [nolebase-asciinema-player](https://nolebase-integrations.ayaka.io/pages/zh-CN/ui/asciinema-player/) 组件
 和 [saciinema](https://asciinema.org/) 录制
 
-<TermRec src="./term/awa.cast" :rows="23" />
+<TermRec src="./test/awa.cast" :rows="23" />

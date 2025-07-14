@@ -1,0 +1,14 @@
+// 自定义样式
+
+.unselectable
+    -moz-user-select: none
+    -webkit-user-select: none
+    user-select: none
+
+// 样式注入
+
+div.table_white_head + table th
+    color: var(--vp-c-text-1) !important
+
+div.table_nowrap + table td
+    white-space: nowrap
