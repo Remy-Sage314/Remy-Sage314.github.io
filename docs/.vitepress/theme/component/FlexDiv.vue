@@ -7,9 +7,11 @@
     </div>
 </template>
 
-<style scoped lang="sass">
+<style lang="sass">
     .flex-div
         display: flex
+        flex-wrap: wrap
+        justify-content: flex-start
 
         @media screen and (orientation: portrait)
             flex-direction: column

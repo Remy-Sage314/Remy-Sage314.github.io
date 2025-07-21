@@ -10,6 +10,13 @@ if (!import.meta.env.SSR) {
 
     document.body.classList.add('enable-cursor')
 
+    function ringAppear() { cr.classList.remove('visually-hidden') }
+    function ringHide() { cr.classList.add('visually-hidden') }
+    function ringDown() { cr.classList.add('down') }
+    function ringUp() { cr.classList.remove('down') }
+    function ringActive() { cr.classList.add('active') }
+    function ringInactive() { cr.classList.remove('active') }
+
     let tx = 0
     let ty = 0
     let cx = 0
@@ -30,9 +37,12 @@ if (!import.meta.env.SSR) {
             const t = e.target
             const s = window.getComputedStyle(t)
             const c = s.getPropertyValue("--custom-cursor-ring")
-            if (c === "active") cr.classList.add('active')
-            else cr.classList.remove('active')
+            if (c === "active") ringActive()
+            else ringInactive()
         }
+        const b = e.button
+        if (typeof b === "object" && b == 0)
+            ringDown(); else ringUp()
     }
 
     function animate() {
@@ -53,14 +63,12 @@ if (!import.meta.env.SSR) {
     })
 
     // 控制 ring 是否显示
-    function ringAppear() { cr.classList.remove('visually-hidden') }
-    function ringHide() { cr.classList.add('visually-hidden') }
 
     document.addEventListener('pointerdown', (e) => {
         switch (e.pointerType) {
             case 'mouse':
                 updatePos(e)
-                cr.classList.add('down')
+                ringDown()
                 ringAppear()
                 break
 
@@ -74,7 +82,7 @@ if (!import.meta.env.SSR) {
         switch (e.pointerType) {
             case 'mouse':
                 updatePos(e)
-                cr.classList.remove('down')
+                ringUp()
                 ringAppear()
                 break
 

@@ -54,18 +54,40 @@
         ```
     </div>
 
-    <ArkMedia unselectable src="./awa.png"/>
+    <ArkMedia ... src="./awa.png"/>
 </div>
 ```
 
 </div>
 
-<ArkMedia unselectable src="./test/awa.png" />
+<ArkMedia id="media1" unselectable src="./test/awa.png" />
 
 </FlexDiv>
+
+<style lang="sass">
+    @media screen and (orientation: landscape)
+        #media1
+            width: 50%
+</style>
 
 记录一下我的一次滚...
 使用 [nolebase-asciinema-player](https://nolebase-integrations.ayaka.io/pages/zh-CN/ui/asciinema-player/) 组件
 和 [saciinema](https://asciinema.org/) 录制
 
 <TermRec src="./test/awa.cast" :rows="23" />
+
+MathJax3 / NaiveSwitchCollapse 测试
+
+<NaiveSwitchCollapse>
+    <template #hide>
+        现在是 折叠/隐藏 状态
+        <n-skeleton text :repeat="2" /> <n-skeleton text style="width: 60%" />
+    </template>
+
+$$ \ce{N2 + 3H2 <=>[Fe][400^\circ C] 2NH3} $$
+
+$$ \pu{55.5 mmol/L} \ce{->[H2O]} \pu{1.0e-7 mol/L} $$
+
+现在可以在这里显示一些东西！
+
+</NaiveSwitchCollapse>

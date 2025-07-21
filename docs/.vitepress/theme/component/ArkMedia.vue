@@ -36,8 +36,9 @@
         max-width: 100%
         max-height: 100%
 
-        & img
+        img
             vertical-align: bottom
+            object-fit: contain
 
         &::before
             content: ""

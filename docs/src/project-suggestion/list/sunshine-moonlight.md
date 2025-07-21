@@ -5,7 +5,7 @@
 
 Sunshine 和 NVIDIA GameStream 的开源客户端
 
-Moonlight 是 NVIDIA GameStream 协议的开源实现, 
+Moonlight 是 NVIDIA GameStream 协议的开源实现
 其实现了 NVIDIA Shield 使用的协议, 并编写了一组第三方客户端
 
 <ProjectProperties name="Moonlight">
@@ -57,8 +57,8 @@ Moonlight 的自托管游戏串流主机
 
 Sunshine 是串流的服务端, 配置好后就可以在 Moonlight 上开始串流了
 
-你需要在 Sunshine 的托盘图标中右键 点击 "Open Sunshine" 以打开 Sunshine 的 WebUI <br/>
-然后设置一个用户名和密码, 以后打开 WebUI 时都会需要 <br/>
+你需要在 Sunshine 的托盘图标中右键 点击 "Open Sunshine" 以打开 Sunshine 的 WebUI
+然后设置一个用户名和密码, 以后打开 WebUI 时都会需要
 可以在 Configuration -> General -> Locale 中设置 WebUI 的语言为中文
 
 如果遇到了问题 可以查看 [官方 Troubleshooting](https://docs.lizardbyte.dev/projects/sunshine/latest/md_docs_2troubleshooting.html)

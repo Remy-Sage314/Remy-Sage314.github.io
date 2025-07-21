@@ -1,5 +1,5 @@
 import { h } from "vue";
-import type { Theme } from 'vitepress'
+import { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme-without-fonts'
 
 import './style/_css.ts'
@@ -11,7 +11,7 @@ import '@nolebase/vitepress-plugin-enhanced-mark/client/style.css'
 
 import * as Comp from './component/_comps.ts'
 
-import * as Lumen from '@theojs/lumen'
+import Comps from './comps.ts'
 
 if (!import.meta.env.SSR) {
     import('./other/search-box-animation/script.ts')
@@ -36,9 +36,9 @@ export default {
 
         const app = ctx.app
         Comp.component(app)
-        app.component("DocPill", Lumen.DocPill)
-        app.component("DocLinks", Lumen.DocLinks)
-        app.component("DocBoxCube", Lumen.DocBoxCube)
+        Object.keys(Comps).forEach(k => {
+            app.component(k, Comps[k])
+        })
 
         if (!import.meta.env.SSR) {
         }

@@ -1,11 +1,13 @@
 {
   "type": "module",
   "devDependencies": {
+    "@css-render/vue3-ssr": "^0.15.14",
     "@nolebase/vitepress-plugin-enhanced-mark": "^2.17.2",
     "@nolebase/vitepress-plugin-enhanced-readabilities": "^2.17.2",
     "@nolebase/vitepress-plugin-page-properties": "^2.17.2",
     "markdown-it-ins": "^4.0.0",
     "markdown-it-mathjax3": "^4.3.2",
+    "naive-ui": "^2.42.0",
     "sass": "^1.87.0",
     "vite": "^6.3.5",
     "vitepress": "^2.0.0-alpha.5",

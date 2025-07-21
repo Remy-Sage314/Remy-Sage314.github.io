@@ -4,6 +4,7 @@ import { LocalSearchTranslations } from "vitepress/types/local-search.js"
 
 import { vitepressDemoPlugin } from 'vitepress-demo-plugin'
 import markdownIns from 'markdown-it-ins'
+import mathjax3 from 'markdown-it-mathjax3'
 
 // https://vitepress.dev/zh/reference/site-config
 const config: UserConfig<NoInfer<DefaultTheme.Config>> = {
@@ -68,9 +69,12 @@ const config: UserConfig<NoInfer<DefaultTheme.Config>> = {
         image: {
             lazyLoading: true
         },
-        math: true,
 
         config(md) {
+            md.set({
+                breaks: true,
+            })
+            md.use(mathjax3)
             md.use(vitepressDemoPlugin)
             md.use(markdownIns)
         },
