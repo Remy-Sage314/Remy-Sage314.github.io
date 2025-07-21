@@ -109,6 +109,8 @@ const config: UserConfig<NoInfer<DefaultTheme.Config>> = {
                 "@nolebase/ui-asciinema",
                 '@nolebase/vitepress-plugin-enhanced-readabilities',
                 '@nolebase/ui',
+
+                'naive-ui', 'date-fns', 'vueuc'
             ]
         }
     },
