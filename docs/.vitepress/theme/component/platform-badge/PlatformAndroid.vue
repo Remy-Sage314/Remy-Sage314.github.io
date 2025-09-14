@@ -1,5 +1,5 @@
 <script setup lang="ts">
-    import BadgeCustom from "../BadgeCustom.vue";
+    import BadgeCustom from "../text/BadgeCustom.vue";
 
     const {
         text = "Android"

@@ -6,7 +6,7 @@
 Sunshine 和 NVIDIA GameStream 的开源客户端
 
 Moonlight 是 NVIDIA GameStream 协议的开源实现
-其实现了 NVIDIA Shield 使用的协议, 并编写了一组第三方客户端
+其实现了 NVIDIA Shield 使用的协议，并编写了一组第三方客户端
 
 <ProjectProperties name="Moonlight">
     <template #platform> <PlatformWindows/> <PlatformLinux/> <PlatformMacOS/> <PlatformAndroid/> </template>
@@ -26,7 +26,7 @@ Moonlight 是 NVIDIA GameStream 协议的开源实现
 
 ### 月光·阿西西
 
-Moonlight 的一个分支, 增强了一些功能
+Moonlight 的一个分支，增强了一些功能
 
 <ProjectProperties name="月光·阿西西">
     <template #platform> <PlatformAndroid/> </template>
@@ -57,9 +57,9 @@ Moonlight 的自托管游戏串流主机
 
 Sunshine 是串流的服务端, 配置好后就可以在 Moonlight 上开始串流了
 
-你需要在 Sunshine 的托盘图标中右键 点击 "Open Sunshine" 以打开 Sunshine 的 WebUI
-然后设置一个用户名和密码, 以后打开 WebUI 时都会需要
-可以在 Configuration -> General -> Locale 中设置 WebUI 的语言为中文
+你需要在 Sunshine 的托盘图标中右键，点击 <BadgeText text="Open Sunshine"/> 以打开 Sunshine 的 WebUI
+然后设置一个用户名和密码，以后打开 WebUI 时都会需要
+可以在 <BadgeText text="Configuration"/> -> <BadgeText text="General"/> -> <BadgeText text="Locale"/> 中设置 WebUI 的语言为中文
 
 如果遇到了问题 可以查看 [官方 Troubleshooting](https://docs.lizardbyte.dev/projects/sunshine/latest/md_docs_2troubleshooting.html)
 
@@ -75,7 +75,7 @@ sudo setcap cap_sys_admin+p $(readlink -f $(which sunshine))
 
 ### 自启动服务 <PlatformLinux/>
 
-Sunshine 默认创建了一个服务 用于自启动, 使用以下命令来启用此服务
+Sunshine 默认创建了一个服务 用于自启动，使用以下命令来启用此服务
 
 ```bash
 systemctl --user enable sunshine

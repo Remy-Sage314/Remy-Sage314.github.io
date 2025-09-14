@@ -62,13 +62,13 @@
 
 <ArkMedia id="media1" unselectable src="./test/awa.png" />
 
-</FlexDiv>
-
 <style lang="sass">
     @media screen and (orientation: landscape)
         #media1
             width: 50%
 </style>
+
+</FlexDiv>
 
 记录一下我的一次滚...
 使用 [nolebase-asciinema-player](https://nolebase-integrations.ayaka.io/pages/zh-CN/ui/asciinema-player/) 组件

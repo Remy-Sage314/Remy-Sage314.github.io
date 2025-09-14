@@ -5,15 +5,17 @@
         text,
         tColor = "var(--vp-c-text-1)",
         bColor = "var(--vp-badge-info-bg)",
+        rColor = "var(--waline-info-color)",
     } = defineProps<{
         text : string,
         tColor ?: string,
         bColor ?: string,
+        rColor ?: string,
     }>()
 </script>
 
 <template>
-    <VPBadge class="BadgeText" :style="{ color: tColor, backgroundColor: bColor }" :text="text" />
+    <VPBadge class="BadgeText" :style="{ color: tColor, backgroundColor: bColor, borderColor: rColor }" :text="text" />
 </template>
 
 <style lang="sass">

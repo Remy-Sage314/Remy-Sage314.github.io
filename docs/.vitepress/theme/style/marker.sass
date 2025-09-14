@@ -1,11 +1,11 @@
 // marker
 // https://vitepress.yiov.top/style
 
-mark
+.mark-hl
     white-space: nowrap
     position: relative
 
-mark:after
+.mark-hl:after
     content: ''
     position: absolute
     z-index: -1
@@ -16,5 +16,5 @@ mark:after
     transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1)
     background-color: var(--vp-nolebase-mark-bg-color)
 
-mark:hover:after
+.mark-hl:hover:after
     top: 0
