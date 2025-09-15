@@ -8,8 +8,8 @@ import mathjax3 from 'markdown-it-mathjax3'
 
 // https://vitepress.dev/zh/reference/site-config
 const config: UserConfig<NoInfer<DefaultTheme.Config>> = {
-    title: "MoYingJi QwQ",
-    description: "一个不知道是什么的网站",
+    title: "RemySage314 QwQ",
+    description: "取不好名字的RemySage314的个人小站",
 
     srcDir: './src',
     cleanUrls: true,
@@ -37,7 +37,7 @@ const config: UserConfig<NoInfer<DefaultTheme.Config>> = {
             }
         },
         editLink: {
-            pattern: 'https://github.com/MoYingJi/moyingji.github.io/edit/main/docs/src/:path',
+            pattern: 'https://github.com/Remy-Sage314/Remy-Sage314.github.io/edit/main/docs/src/:path',
             text: "于 GitHub 编辑此页"
         },
         outline: "deep",
