@@ -9,7 +9,13 @@ import mathjax3 from 'markdown-it-mathjax3'
 // https://vitepress.dev/zh/reference/site-config
 const config: UserConfig<NoInfer<DefaultTheme.Config>> = {
     title: "RemySage314 QwQ",
-    description: "取不好名字的RemySage314的个人小站",
+    description: "RemySage314的个人小站",
+
+    head: [['meta', { name: 'msvalidate.01', content: '065026287AAE1E77F72E0B9E3D39CA40' }]],
+
+    sitemap: {
+        hostname: 'https://remy-sage314.github.io/'
+    },
 
     srcDir: './src',
     cleanUrls: true,
@@ -25,7 +31,7 @@ const config: UserConfig<NoInfer<DefaultTheme.Config>> = {
             { text: '关于', link: '/about' },
         ],
         socialLinks: [
-            { icon: 'github', link: 'https://github.com/MoYingJi/moyingji.github.io' }
+            { icon: 'github', link: 'https://github.com/Remy-Sage314/Remy-Sage314.github.io' }
         ],
         sidebar: {
         },
