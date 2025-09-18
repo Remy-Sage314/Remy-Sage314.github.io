@@ -2,6 +2,8 @@ import { h } from "vue";
 import { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme-without-fonts'
 
+import MyLayout from './MyLayout.vue'
+
 import './style/_css.ts'
 import './other/cursor-and-ring/cursor.ts'
 
@@ -23,7 +25,7 @@ const parent: Theme = DefaultTheme
 export default {
     extends: parent,
     Layout: () => {
-        return h(DefaultTheme.Layout, null, {
+        return h(MyLayout, null, {
             // 为较宽的屏幕的导航栏添加阅读增强菜单
             'nav-bar-content-after': () => h(ER.NolebaseEnhancedReadabilitiesMenu),
             // 为较窄的屏幕（通常是小于 iPad Mini）添加阅读增强菜单
