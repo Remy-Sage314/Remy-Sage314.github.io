@@ -30,7 +30,3 @@
         </n-collapse-transition>
     </n-space></n-card>
 </template>
-
-<style scoped lang="sass">
-
-</style>

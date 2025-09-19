@@ -15,7 +15,3 @@
         <slot/>
     </n-tooltip>
 </template>
-
-<style scoped lang="sass">
-
-</style>
