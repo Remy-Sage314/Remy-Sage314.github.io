@@ -19,10 +19,10 @@
         <n-switch v-model:value="show">
             <template #checked> {{ tShow }} </template>
             <template #unchecked> {{ tHide }} </template>
-            <template #checked-icon><n-icon :component="ChevronDownOutline" /></template>
-            <template #unchecked-icon><n-icon :component="ChevronForwardOutline" /></template>
+            <template #checked-icon> <n-icon :component="ChevronDownOutline" /> </template>
+            <template #unchecked-icon> <n-icon :component="ChevronForwardOutline" /> </template>
         </n-switch>
-        <n-collapse-transition :show="!show">
+        <n-collapse-transition :show="!show" v-if="$slots.hide">
             <slot name="hide"/>
         </n-collapse-transition>
         <n-collapse-transition :show="show">

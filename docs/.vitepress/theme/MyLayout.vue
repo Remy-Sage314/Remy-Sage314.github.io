@@ -1,11 +1,19 @@
 <script setup lang="ts">
 import DefaultTheme from 'vitepress/theme-without-fonts'
 
-import { ref, onMounted, onUnmounted } from 'vue'
+import { h, ref, onMounted, onUnmounted } from 'vue'
+
 import { darkTheme, lightTheme } from 'naive-ui'
 import type { GlobalTheme } from 'naive-ui'
 
-const { Layout } = DefaultTheme
+import * as ER from '@nolebase/vitepress-plugin-enhanced-readabilities/client'
+
+const Layout = h(DefaultTheme.Layout, null, {
+    // 为较宽的屏幕的导航栏添加阅读增强菜单
+    'nav-bar-content-after': () => h(ER.NolebaseEnhancedReadabilitiesMenu),
+    // 为较窄的屏幕（通常是小于 iPad Mini）添加阅读增强菜单
+    'nav-screen-content-after': () => h(ER.NolebaseEnhancedReadabilitiesScreenMenu),
+})
 
 // 响应式主题变量
 const theme = ref<GlobalTheme | null>(null)
