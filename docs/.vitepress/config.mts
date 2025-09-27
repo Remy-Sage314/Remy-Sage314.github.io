@@ -45,7 +45,8 @@ const config: UserConfig<NoInfer<DefaultTheme.Config>> = {
                             navigateText: '切换',
                             closeText: '关闭',
                         },
-                    }                },
+                    }
+                },
             }
         },
         editLink: {
