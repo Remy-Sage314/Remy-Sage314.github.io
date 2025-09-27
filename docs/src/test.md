@@ -6,6 +6,8 @@
     }
 </script>
 
+这里会展示一些奇奇怪怪的小功能
+
 由 [bullshit-generator-js](https://github.com/akira-cn/bullshit-generator-js) 生成
 
 ::: details 中午吃什么？

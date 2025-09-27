@@ -7,6 +7,8 @@
         "types": ["vitepress/client"],
         "allowImportingTsExtensions": true,
         "noEmit": true,
-        "jsx": "preserve"
+        "jsx": "preserve",
+        "forceConsistentCasingInFileNames": true,
+        "strict": true
     }
 }
