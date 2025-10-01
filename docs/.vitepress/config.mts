@@ -26,6 +26,7 @@ const config: UserConfig<NoInfer<DefaultTheme.Config>> = {
     themeConfig: {
         // https://vitepress.dev/zh/reference/default-theme-config
         nav: [
+            {text: '激扬文字', link: '/articles'},
             { text: '关于', link: '/about' },
         ],
         socialLinks: [
