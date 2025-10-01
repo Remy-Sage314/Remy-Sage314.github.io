@@ -1,7 +1,5 @@
 import { DefaultTheme, defineConfig, UserConfig } from 'vitepress'
 
-import { LocalSearchTranslations } from "vitepress/types/local-search.js"
-
 import { vitepressDemoPlugin } from 'vitepress-demo-plugin'
 import markdownIns from 'markdown-it-ins'
 import mathjax3 from 'markdown-it-mathjax3'
@@ -39,7 +37,22 @@ const config: UserConfig<NoInfer<DefaultTheme.Config>> = {
         search: {
             provider: 'local',
             options: {
-                translations: searchTranslation(),
+                translations: {
+                    button: {
+                        buttonText: '搜索文档',
+                    },
+                    modal: {
+                        displayDetails: '显示详细信息',
+                        resetButtonTitle: '清除查询条件',
+                        backButtonTitle: '返回',
+                        noResultsText: '没有搜索结果',
+                        footer: {
+                            selectText: '选择',
+                            navigateText: '切换',
+                            closeText: '关闭',
+                        },
+                    }
+                },
             }
         },
         editLink: {
@@ -120,24 +133,20 @@ const config: UserConfig<NoInfer<DefaultTheme.Config>> = {
             ]
         }
     },
+
+    vue: {
+        // Vue 配置选项
+        template: {
+            compilerOptions: {
+                isCustomElement: (tag) => {
+                    if (tag.startsWith('mjx-')) return true
+                }
+            }
+        }
+    },
 }
 
-function searchTranslation(): LocalSearchTranslations { return {
-    button: {
-        buttonText: '搜索文档',
-    },
-    modal: {
-        displayDetails: '显示详细信息',
-        resetButtonTitle: '清除查询条件',
-        backButtonTitle: '返回',
-        noResultsText: '没有搜索结果',
-        footer: {
-            selectText: '选择',
-            navigateText: '切换',
-            closeText: '关闭',
-        },
-    }
-} }
+
 
 // noinspection JSUnusedGlobalSymbols
 export default defineConfig(config)

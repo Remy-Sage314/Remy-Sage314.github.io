@@ -15,4 +15,3 @@
 <template>
     <VPBadge :style="{ color: tColor, backgroundColor: bColor }" :text="text" />
 </template>
-

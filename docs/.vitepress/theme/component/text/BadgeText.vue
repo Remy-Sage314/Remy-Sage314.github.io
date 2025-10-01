@@ -26,4 +26,3 @@
         padding: 0 5px
         font-weight: normal
 </style>
-
