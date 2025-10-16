@@ -10,20 +10,20 @@
     "markdown-it-mathjax3": "^4.3.2",
     "naive-ui": "^2.43.1",
     "sass": "^1.93.2",
-    "vite": "^6.3.6",
+    "vite": "^7.1.10",
     "vitepress": "2.0.0-alpha.12",
-    "vitepress-demo-plugin": "^1.4.7",
+    "vitepress-demo-plugin": "^1.5.0",
     "vue": "^3.5.22"
   },
   "scripts": {
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs"
   },
   "dependencies": {
     "@nolebase/ui-asciinema": "^2.18.2",
     "@theojs/lumen": "^5.8.2",
-    "asciinema-player": "^3.10.0",
+    "asciinema-player": "^3.12.1",
     "ts-regex-builder": "^1.8.2"
   }
 }
