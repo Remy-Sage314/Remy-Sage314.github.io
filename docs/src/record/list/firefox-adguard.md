@@ -8,6 +8,8 @@
 
 所以，我们需要直接下载 AdGuard 的 xpi 文件，并安装
 
+## 下载 AdGuard 的测试版 xpi 文件
+
 [这里](https://agrd.io/extension_firefox_beta) 可以直接从官方获取 AdGuard Beta 版的 xpi 文件，且国内网络环境可以正常访问
 
 ## 安装 xpi 文件

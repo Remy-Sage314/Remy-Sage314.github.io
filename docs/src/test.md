@@ -78,9 +78,9 @@
 
 <TermRec src="./test/awa.cast" :rows="23" />
 
-MathJax3 / NaiveSwitchCollapse 测试
+MathJax3 / NSwitchCollapse 测试
 
-<NaiveSwitchCollapse>
+<NSwitchCollapse>
     <template #hide>
         现在是 折叠/隐藏 状态
         <n-skeleton text :repeat="2" /> <n-skeleton text style="width: 60%" />
@@ -92,6 +92,6 @@ $$ \pu{55.5 mmol/L} \ce{->[H2O]} \pu{1.0e-7 mol/L} $$
 
 现在可以在这里显示一些东西！
 
-</NaiveSwitchCollapse>
+</NSwitchCollapse>
 
 猜猜<nt text="这个">这是个<mt>东西</mt>就对了<br/>嗯...对</nt>是什么东西，其实<mt>只是段特殊的文字</mt>哦！

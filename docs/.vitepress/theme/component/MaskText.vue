@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+    import { ref } from 'vue'
 
-const mask = ref(true)
-function toggle() {
-    if (window.getSelection()?.toString()) return
-    mask.value = !mask.value
-}
+    const mask = ref(true)
+    function toggle() {
+        if (window.getSelection()?.toString()) return
+        mask.value = !mask.value
+    }
 </script>
 
 <template>

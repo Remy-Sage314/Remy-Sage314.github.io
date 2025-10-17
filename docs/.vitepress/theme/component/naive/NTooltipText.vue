@@ -1,4 +1,6 @@
 <script setup lang="ts">
+    import { NTooltip } from 'naive-ui'
+
     const {
         text
     } = defineProps<{
@@ -7,7 +9,7 @@
 </script>
 
 <template>
-    <n-tooltip trigger="hover">
+    <n-tooltip trigger="hover" :themeOverrides="{}">
         <template #trigger>
             <u class="mark-hl"> {{ text }} </u>
         </template>

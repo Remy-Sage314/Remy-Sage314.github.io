@@ -3,10 +3,10 @@ export { component }
 
 const glob = import.meta.glob('./**/*.vue', { eager: true })
 
-const modules = {}
+const modules: Record<string, any> = {}
 Object.keys(glob).forEach(key => {
-    const name = key.split('/').pop()
-        ?.replace(/^([a-zA-Z]*)\.vue$/, '$1')
+    const name = key.split('/').pop()?.replace(/^([a-zA-Z]*)\.vue$/, '$1')
+    if (!name) return
     modules[name] = glob[key]
 })
 

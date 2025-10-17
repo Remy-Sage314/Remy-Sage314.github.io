@@ -6,6 +6,8 @@ import { h, ref, onMounted, onUnmounted } from 'vue'
 import { darkTheme, lightTheme } from 'naive-ui'
 import type { GlobalTheme } from 'naive-ui'
 
+import { NConfigProvider } from 'naive-ui'
+
 import * as ER from '@nolebase/vitepress-plugin-enhanced-readabilities/client'
 
 const Layout = h(DefaultTheme.Layout, null, {

@@ -1,20 +1,20 @@
 import * as Lumen from '@theojs/lumen'
 import * as Naive from 'naive-ui/es/components'
 
-import NaiveTooltipText from "./component/naive/NaiveTooltipText.vue";
+import NTooltipText from "./component/naive/NTooltipText.vue";
 import MaskText from "./component/MaskText.vue";
 
 export default {
-    "nt": NaiveTooltipText,
+    "nt": NTooltipText,
     "mt": MaskText,
 
     "DocPill": Lumen.DocPill,
     "DocLinks": Lumen.DocLinks,
     "DocBoxCube": Lumen.DocBoxCube,
 
-    "NConfigProvider": Naive.NConfigProvider,
     "NButton": Naive.NButton,
     "NIcon": Naive.NIcon,
+    "NImage": Naive.NImage,
     "NSkeleton": Naive.NSkeleton,
     "NTooltip": Naive.NTooltip,
 }
