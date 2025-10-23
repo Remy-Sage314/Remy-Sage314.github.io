@@ -34,13 +34,13 @@ $z-index-cursor-ring: 2147483647
 // 深色 / 浅色 主题
 
 html.dark body.enable-cursor
-    *
+    &, *
         cursor: url(cursor-white.png) 3 3, auto !important
     .cursor-ring
         border-color: rgba(255, 255, 255, $border-alpha)
         --active-background-color: rgba(255, 255, 255, #{$active-background-alpha})
 html body.enable-cursor
-    *
+    &, *
         cursor: url(cursor-black.png) 3 3, auto !important
     .cursor-ring
         border-color: rgba(0, 0, 0, $border-alpha)
