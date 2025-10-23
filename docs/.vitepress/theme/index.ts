@@ -1,21 +1,20 @@
-import { h } from "vue";
 import { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme-without-fonts'
 
 import MyLayout from './MyLayout.vue'
 
-import './style/_css.ts'
-import './other/cursor-and-ring/cursor.ts'
+import './styles/_css.ts'
+import './others/cursor-and-ring/cursor.ts'
 
 import '@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css'
 import '@nolebase/vitepress-plugin-enhanced-mark/client/style.css'
 
-import * as Comp from './component/_comps.ts'
+import * as Comp from './components/_comps.ts'
 
 import Comps from './comps.ts'
 
 if (!import.meta.env.SSR) {
-    import('./other/search-box-animation/script.ts')
+    import('./others/search-box-animation/script.ts')
 }
 
 const parent: Theme = DefaultTheme

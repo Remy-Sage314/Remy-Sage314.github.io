@@ -1,8 +1,10 @@
+import { Component } from "vue";
+
 import * as Lumen from '@theojs/lumen'
 import * as Naive from 'naive-ui/es/components'
 
-import NTooltipText from "./component/naive/NTooltipText.vue";
-import MaskText from "./component/MaskText.vue";
+import NTooltipText from "./components/naive/NTooltipText.vue";
+import MaskText from "./components/MaskText.vue";
 
 export default {
     "nt": NTooltipText,
@@ -17,4 +19,4 @@ export default {
     "NImage": Naive.NImage,
     "NSkeleton": Naive.NSkeleton,
     "NTooltip": Naive.NTooltip,
-}
+} as Record<string, Component>
