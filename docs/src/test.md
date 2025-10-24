@@ -40,7 +40,7 @@
 
 :::
 
-<FlexDiv>
+<NFlex>
 
 <div>
 
@@ -50,7 +50,7 @@
 <div style="display: flex">
     <div>
         组件 [ak-ui ak-media](...)
-        
+
         ```html{10}
             (代码展示...)
         ```
@@ -62,15 +62,9 @@
 
 </div>
 
-<ArkMedia id="media1" unselectable src="./test/awa.png" />
+<ArkMedia style="width: 300px" unselectable src="./test/awa.png" />
 
-<style lang="sass">
-    @media screen and (orientation: landscape)
-        #media1
-            width: 50%
-</style>
-
-</FlexDiv>
+</NFlex>
 
 记录一下我的一次滚...
 使用 [nolebase-asciinema-player](https://nolebase-integrations.ayaka.io/pages/zh-CN/ui/asciinema-player/) 组件

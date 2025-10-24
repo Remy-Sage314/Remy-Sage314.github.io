@@ -15,6 +15,7 @@ export default {
     "DocBoxCube": Lumen.DocBoxCube,
 
     "NButton": Naive.NButton,
+    "NFlex": Naive.NFlex,
     "NIcon": Naive.NIcon,
     "NImage": Naive.NImage,
     "NSkeleton": Naive.NSkeleton,
