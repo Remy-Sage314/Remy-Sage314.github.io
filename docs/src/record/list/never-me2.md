@@ -5,6 +5,10 @@
 <style lang="sass">
     .n-image
         border-radius: 10px
+
+        -moz-user-select: none
+        -webkit-user-select: none
+        user-select: none
 </style>
 
 ## 错误方式
