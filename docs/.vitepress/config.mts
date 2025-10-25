@@ -1,5 +1,6 @@
 import { DefaultTheme, defineConfig, UserConfig } from 'vitepress'
 
+import * as MdExt from './extensions/markdown/_script.ts'
 import { vitepressDemoPlugin } from 'vitepress-demo-plugin'
 import markdownIns from 'markdown-it-ins'
 import mathjax3 from 'markdown-it-mathjax3'
@@ -84,6 +85,7 @@ const config: UserConfig<NoInfer<DefaultTheme.Config>> = {
         },
 
         config(md) {
+            MdExt.config(md)
             md.set({
                 breaks: true,
             })
