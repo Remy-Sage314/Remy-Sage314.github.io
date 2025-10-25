@@ -1,12 +1,33 @@
-import { Component } from "vue";
+import { App, Component } from "vue";
+
+export { component, components }
+
+const glob = import.meta.glob(
+    ['./components/**/*.vue', '../extensions/components/**/*.vue'],
+    { eager: true }
+)
+
+const modules: Record<string, any> = {}
+Object.keys(glob).forEach(key => {
+    const name = key.split('/').pop()?.replace(/^([a-zA-Z]*)\.vue$/, '$1')
+    if (!name) return
+    modules[name] = glob[key]
+})
+
+function component(app: App) {
+    for (const name in modules) {
+        const comp: any = modules[name]
+        app.component(name, comp.default)
+    }
+}
 
 import * as Lumen from '@theojs/lumen'
 import * as Naive from 'naive-ui/es/components'
 
-import NTooltipText from "./components/naive/NTooltipText.vue";
-import MaskText from "./components/MaskText.vue";
+import NTooltipText from "../extensions/components/naive/NTooltipText.vue";
+import MaskText from "../extensions/components/MaskText.vue";
 
-export default {
+const components = {
     "nt": NTooltipText,
     "mt": MaskText,
 
