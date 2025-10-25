@@ -1,7 +1,5 @@
 import { App, Component } from "vue";
 
-export { component, components }
-
 const glob = import.meta.glob(
     ['./components/**/*.vue', '../extensions/components/**/*.vue'],
     { eager: true }
@@ -14,7 +12,7 @@ Object.keys(glob).forEach(key => {
     modules[name] = glob[key]
 })
 
-function component(app: App) {
+export function component(app: App) {
     for (const name in modules) {
         const comp: any = modules[name]
         app.component(name, comp.default)
@@ -27,7 +25,7 @@ import * as Naive from 'naive-ui/es/components'
 import NTooltipText from "../extensions/components/naive/NTooltipText.vue";
 import MaskText from "../extensions/components/MaskText.vue";
 
-const components = {
+export const components = {
     "nt": NTooltipText,
     "mt": MaskText,
 
