@@ -1,8 +1,8 @@
 import { App, Component } from "vue";
 
 const glob = import.meta.glob(
-    ['./components/**/*.vue', '../extensions/components/**/*.vue'],
-    { eager: true }
+    ['./components/**/*.vue'],
+    { eager: true },
 )
 
 const modules: Record<string, any> = {}
@@ -22,8 +22,8 @@ export function component(app: App) {
 import * as Lumen from '@theojs/lumen'
 import * as Naive from 'naive-ui/es/components'
 
-import NTooltipText from "../extensions/components/naive/NTooltipText.vue";
-import MaskText from "../extensions/components/MaskText.vue";
+import NTooltipText from "./components/naive/NTooltipText.vue";
+import MaskText from "./components/MaskText.vue";
 
 export const components = {
     "nt": NTooltipText,
