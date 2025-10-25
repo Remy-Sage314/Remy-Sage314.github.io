@@ -15,11 +15,28 @@
 </template>
 
 <style lang="sass">
-    .mask-text
-        display: inline
-        transition: filter 0.3s
+    $radius: 2px
 
-        &.is-mask
-            filter: blur(5px)
-            user-select: none
+    .mask-text
+        position: relative
+        display: inline
+        background: #8882
+        border-radius: $radius
+
+    .mask-text::after
+        position: absolute
+        display: inline
+        user-select: none
+        content: ""
+        inset: 0
+        z-index: 1
+        border-radius: $radius
+        transition: background 0.3s, backdrop-filter 0.3s
+
+    .mask-text.is-mask
+        user-select: none
+
+    .mask-text.is-mask::after
+        background: #8882
+        backdrop-filter: blur(10px)
 </style>
