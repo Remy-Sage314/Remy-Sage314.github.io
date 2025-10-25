@@ -1,4 +1,4 @@
-import './css.sass'
+import './style.sass'
 
 const observer = new MutationObserver(mutations => {
     for (const mutation of mutations)
@@ -14,7 +14,7 @@ document.body.removeChild = function <T extends Node> (child: T): T {
         searchLeave(child)
         return child
     }
-    return remove.call(this, child)
+    return remove.call(this, child) as T
 }
 
 function searchEnter(e: HTMLElement) {
