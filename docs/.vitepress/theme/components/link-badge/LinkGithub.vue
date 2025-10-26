@@ -1,5 +1,5 @@
 <script setup lang="ts">
-    import { DocPill } from '@theojs/lumen'
+    import { DocPill } from "@theojs/lumen"
 
     const {
         project,
@@ -18,7 +18,7 @@
         :link="'https://github.com/' + project"
         :image="{
             light: 'https://i.theojs.cn/logo/github.svg',
-            dark: 'https://i.theojs.cn/logo/github-dark.svg',
+            dark: 'https://i.theojs.cn/logo/github-dark.svg'
         }"
         rel="noopener noreferrer"
     />

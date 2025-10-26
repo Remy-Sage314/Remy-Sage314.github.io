@@ -6,7 +6,7 @@
         src,
         cols,
         rows,
-        fontsize = '12px',
+        fontsize = "12px",
         autoplay = false,
         loop = false,
     } = defineProps<{

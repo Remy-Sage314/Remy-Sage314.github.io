@@ -1,4 +1,4 @@
-import './style.sass'
+import "./style.sass"
 
 const observer = new MutationObserver(mutations => {
     for (const mutation of mutations)
