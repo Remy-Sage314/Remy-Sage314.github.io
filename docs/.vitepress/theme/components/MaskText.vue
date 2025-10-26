@@ -27,6 +27,7 @@
         position: absolute
         display: inline
         user-select: none
+        pointer-events: none
         content: ""
         inset: 0
         z-index: 1
