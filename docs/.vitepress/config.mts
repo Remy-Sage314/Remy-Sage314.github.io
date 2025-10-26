@@ -51,8 +51,8 @@ const config: UserConfig<NoInfer<DefaultTheme.Config>> = {
             }
         },
         editLink: {
-            pattern: "https://github.com/MoYingJi/moyingji.github.io/edit/main/docs/src/:path",
-            text: "于 GitHub 编辑此页"
+            pattern: "https://github.com/MoYingJi/moyingji.github.io/blob/main/docs/src/:path?plain=1",
+            text: "于 GitHub 查看此页"
         },
         outline: "deep",
 
