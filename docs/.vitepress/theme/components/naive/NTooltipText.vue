@@ -1,5 +1,5 @@
 <script setup lang="ts">
-    import { NTooltip } from 'naive-ui'
+    import { NTooltip } from "naive-ui"
 
     const {
         text
@@ -9,11 +9,16 @@
 </script>
 
 <template>
-    <n-tooltip trigger="hover" :themeOverrides="{}">
+    <n-tooltip class="n-tooltip" trigger="hover" :theme-overrides="{
+        color: 'rgb(72, 72, 78)' // popoverColor
+    }">
         <template #trigger>
             <u class="mark-hl"> {{ text }} </u>
         </template>
 
-        <slot/>
+        <div class="tooltip-content"><slot/></div>
     </n-tooltip>
 </template>
+
+<style lang="sass">
+</style>
