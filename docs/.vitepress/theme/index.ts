@@ -1,20 +1,19 @@
-import { Theme } from 'vitepress'
-import DefaultTheme from 'vitepress/theme-without-fonts'
+import { Theme } from "vitepress"
+import DefaultTheme from "vitepress/theme-without-fonts"
 
-import MyLayout from './MyLayout.vue'
+import MyLayout from "./MyLayout.vue"
 
-import './style/_css.ts'
-import './other/cursor-and-ring/cursor.ts'
+import "./styles/_css.ts"
+import "./others/animated-link/script.ts"
 
-import '@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css'
-import '@nolebase/vitepress-plugin-enhanced-mark/client/style.css'
+import "@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css"
+import "@nolebase/vitepress-plugin-enhanced-mark/client/style.css"
 
-import * as Comp from './component/_comps.ts'
-
-import Comps from './comps.ts'
+import * as Comp from "./comps.ts"
 
 if (!import.meta.env.SSR) {
-    import('./other/search-box-animation/script.ts')
+    import("./others/cursor-and-ring/script.ts")
+    import("./others/search-box-animation/script.ts")
 }
 
 const parent: Theme = DefaultTheme
@@ -28,10 +27,9 @@ export default {
         parent.enhanceApp?.(ctx)
 
         const app = ctx.app
+        const comps = Comp.components
         Comp.component(app)
-        Object.keys(Comps).forEach(k => {
-            app.component(k, Comps[k])
-        })
+        Object.keys(comps).forEach(k => app.component(k, comps[k]))
 
         if (!import.meta.env.SSR) {
         }

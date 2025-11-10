@@ -1,8 +1,9 @@
-import { DefaultTheme, defineConfig, UserConfig } from 'vitepress'
+import { DefaultTheme, defineConfig, UserConfig } from "vitepress"
 
-import { vitepressDemoPlugin } from 'vitepress-demo-plugin'
-import markdownIns from 'markdown-it-ins'
-import mathjax3 from 'markdown-it-mathjax3'
+import * as MdExt from "./extensions/markdown/_script.ts"
+import { vitepressDemoPlugin } from "vitepress-demo-plugin"
+import markdownIns from "markdown-it-ins"
+import mathjax3 from "markdown-it-mathjax3"
 
 // https://vitepress.dev/zh/reference/site-config
 const config: UserConfig<NoInfer<DefaultTheme.Config>> = {
@@ -15,7 +16,7 @@ const config: UserConfig<NoInfer<DefaultTheme.Config>> = {
         hostname: 'https://remy-sage314.github.io/'
     },
 
-    srcDir: './src',
+    srcDir: "./src",
     cleanUrls: true,
 
     rewrites: {
@@ -36,21 +37,21 @@ const config: UserConfig<NoInfer<DefaultTheme.Config>> = {
         },
 
         search: {
-            provider: 'local',
+            provider: "local",
             options: {
                 translations: {
                     button: {
-                        buttonText: '搜索文档',
+                        buttonText: "搜索文档",
                     },
                     modal: {
-                        displayDetails: '显示详细信息',
-                        resetButtonTitle: '清除查询条件',
-                        backButtonTitle: '返回',
-                        noResultsText: '没有搜索结果',
+                        displayDetails: "显示详细信息",
+                        resetButtonTitle: "清除查询条件",
+                        backButtonTitle: "返回",
+                        noResultsText: "没有搜索结果",
                         footer: {
-                            selectText: '选择',
-                            navigateText: '切换',
-                            closeText: '关闭',
+                            selectText: "选择",
+                            navigateText: "切换",
+                            closeText: "关闭",
                         },
                     }
                 },
@@ -58,26 +59,26 @@ const config: UserConfig<NoInfer<DefaultTheme.Config>> = {
         },
         editLink: {
             pattern: 'https://github.com/Remy-Sage314/Remy-Sage314.github.io/edit/main/docs/src/:path',
-            text: "于 GitHub 编辑此页"
+            text: "于 GitHub 查看此页"
         },
         outline: "deep",
 
 
         docFooter: {
-            prev: '上一页',
-            next: '下一页'
+            prev: "上一页",
+            next: "下一页"
         },
-        darkModeSwitchLabel: '外观',
-        returnToTopLabel: '返回顶部',
-        sidebarMenuLabel: '菜单',
+        darkModeSwitchLabel: "外观",
+        returnToTopLabel: "返回顶部",
+        sidebarMenuLabel: "菜单",
         outlineTitle: "页面导航",
     },
 
-    lang: 'zh-CN',
+    lang: "zh-CN",
     locales: {
         root: {
-            label: '中文',
-            lang: 'zh-CN'
+            label: "中文",
+            lang: "zh-CN"
         },
     },
 
@@ -91,6 +92,7 @@ const config: UserConfig<NoInfer<DefaultTheme.Config>> = {
         },
 
         config(md) {
+            MdExt.config(md)
             md.set({
                 breaks: true,
             })
@@ -100,11 +102,11 @@ const config: UserConfig<NoInfer<DefaultTheme.Config>> = {
         },
 
         container: {
-            tipLabel: '提示',
-            warningLabel: '警告',
-            dangerLabel: '危险',
-            infoLabel: '信息',
-            detailsLabel: '详细信息'
+            tipLabel: "提示",
+            warningLabel: "警告",
+            dangerLabel: "危险",
+            infoLabel: "信息",
+            detailsLabel: "详细信息"
         }
     },
 
@@ -112,25 +114,25 @@ const config: UserConfig<NoInfer<DefaultTheme.Config>> = {
         // Vite 配置选项
         // https://cn.vitejs.dev/config
 
-        publicDir: '../public',
+        publicDir: "../public",
 
         plugins: [
         ],
 
         optimizeDeps: {
             exclude: [
-                '@nolebase/vitepress-plugin-enhanced-readabilities/client',
-                'vitepress',
-                '@nolebase/ui',
+                "@nolebase/vitepress-plugin-enhanced-readabilities/client",
+                "vitepress",
+                "@nolebase/ui",
             ]
         },
         ssr: {
             noExternal: [
                 "@nolebase/ui-asciinema",
-                '@nolebase/vitepress-plugin-enhanced-readabilities',
-                '@nolebase/ui',
+                "@nolebase/vitepress-plugin-enhanced-readabilities",
+                "@nolebase/ui",
 
-                'naive-ui', 'date-fns', 'vueuc'
+                "naive-ui", "date-fns", "vueuc"
             ]
         }
     },
@@ -140,7 +142,7 @@ const config: UserConfig<NoInfer<DefaultTheme.Config>> = {
         template: {
             compilerOptions: {
                 isCustomElement: (tag) => {
-                    if (tag.startsWith('mjx-')) return true
+                    if (tag.startsWith("mjx-")) return true
                 }
             }
         }
