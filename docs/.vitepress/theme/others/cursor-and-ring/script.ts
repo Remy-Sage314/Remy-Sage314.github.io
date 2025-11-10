@@ -38,6 +38,9 @@ function mouseStyleChange(e: MouseEvent) {
         const c = s.getPropertyValue("--custom-cursor-ring")
         if (c === "active") ringActive()
         else ringInactive()
+        if (t.tagName === 'GISCUS-WIDGET') {
+        //     TODO: 光标需要修复
+        }
     }
     const b = e.button
     if (typeof b === "object" && b == 0)
