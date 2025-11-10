@@ -1,6 +1,7 @@
 {
     "type": "module",
     "dependencies": {
+        "@giscus/vue": "^3.1.1",
         "@nolebase/ui-asciinema": "^2.18.2",
         "@theojs/lumen": "^5.8.2",
         "asciinema-player": "^3.12.1",

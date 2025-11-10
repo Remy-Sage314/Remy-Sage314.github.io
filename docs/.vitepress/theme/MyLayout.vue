@@ -1,8 +1,9 @@
 <script setup lang="ts">
+import GiscusComment from "./components/GiscusComment.vue";
 import DefaultTheme from "vitepress/theme-without-fonts"
 
 import { h, ref, onMounted, onUnmounted } from "vue"
-import { useData } from "vitepress"
+// import { useData } from "vitepress"
 
 import { darkTheme, lightTheme } from "naive-ui"
 import type { GlobalTheme } from "naive-ui"
@@ -11,7 +12,7 @@ import { NConfigProvider } from "naive-ui"
 
 import * as ER from "@nolebase/vitepress-plugin-enhanced-readabilities/client"
 
-const data = useData()
+// const data = useData()
 
 const Layout = h(DefaultTheme.Layout, null, {
     // 为较宽的屏幕的导航栏添加阅读增强菜单
@@ -61,6 +62,9 @@ onUnmounted(() => {
 <template>
     <n-config-provider :theme="theme">
         <Layout>
+            <template #doc-after>
+                <GiscusComment />
+            </template>
         </Layout>
     </n-config-provider>
 </template>
