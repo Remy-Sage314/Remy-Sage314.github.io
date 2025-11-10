@@ -1,11 +1,11 @@
 <!--https://note.weizwz.com/vitepress/extend/vitepress-giscus-->
 <script setup lang="ts">
 import { watch } from 'vue'
-import { inBrowser, useData } from 'vitepress'
+import { inBrowser, useData, useRoute } from 'vitepress'
 import GisCus from "@giscus/vue";
 
 const { isDark } = useData()
-// const route = useRoute()
+const route = useRoute()
 
 watch(isDark, (dark) => {
     if (!inBrowser) return
@@ -23,6 +23,7 @@ watch(isDark, (dark) => {
     repo-id="R_kgDOP6Gr_w"
     category="Announcements"
     category-id="DIC_kwDOP6Gr_84CxngX"
+    :key="route.path"
     mapping="pathname"
     strict="1"
     reactions-enabled="1"
