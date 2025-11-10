@@ -1,4 +1,4 @@
-<!--https://note.weizwz.com/vitepress/extend/vitepress-giscus-->
+<!-- https://note.weizwz.com/vitepress/extend/vitepress-giscus -->
 <script setup lang="ts">
 import { watch } from 'vue'
 import { inBrowser, useData, useRoute } from 'vitepress'

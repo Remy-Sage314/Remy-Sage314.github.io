@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import GiscusComment from "./components/GiscusComment.vue";
 import DefaultTheme from "vitepress/theme-without-fonts"
 
 import { h, ref, onMounted, onUnmounted } from "vue"
-// import { useData } from "vitepress"
+import { useData } from "vitepress"
 
 import { darkTheme, lightTheme } from "naive-ui"
 import type { GlobalTheme } from "naive-ui"
@@ -11,14 +10,17 @@ import type { GlobalTheme } from "naive-ui"
 import { NConfigProvider } from "naive-ui"
 
 import * as ER from "@nolebase/vitepress-plugin-enhanced-readabilities/client"
+import GiscusComment from "./components/GiscusComment.vue"
 
-// const data = useData()
+const data = useData()
 
 const Layout = h(DefaultTheme.Layout, null, {
     // 为较宽的屏幕的导航栏添加阅读增强菜单
     "nav-bar-content-after": () => h(ER.NolebaseEnhancedReadabilitiesMenu),
     // 为较窄的屏幕（通常是小于 iPad Mini）添加阅读增强菜单
     "nav-screen-content-after": () => h(ER.NolebaseEnhancedReadabilitiesScreenMenu),
+    // 添加Giscus
+    "doc-after": () => h(GiscusComment),
 })
 
 // 响应式主题变量
@@ -62,9 +64,6 @@ onUnmounted(() => {
 <template>
     <n-config-provider :theme="theme">
         <Layout>
-            <template #doc-after>
-                <GiscusComment />
-            </template>
         </Layout>
     </n-config-provider>
 </template>
